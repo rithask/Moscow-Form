@@ -67,7 +67,15 @@ function submitResponse(e) {
 	const name = formData.get('name');
 	const selection = formData.get('homie');
 
+	if (name.length === 0 || selection === null) {
+		alert('Please fill out all fields!');
+		return;
+	}
+
 	const data = `"${name}" says "${selection}!"`
+
+	const btn = document.getElementById('submit-btn');
+	btn.disabled = true;
 
 	fetch('https://ntfy.sh/moscow', {
 		method: 'POST',

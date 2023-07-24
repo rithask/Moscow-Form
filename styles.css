@@ -97,3 +97,7 @@ button:active {
         opacity: 1; /* Fade to full opacity */
     }
 }
+
+button:disabled {
+	animation: none;
+}
