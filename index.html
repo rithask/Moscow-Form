@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Moscow</title>
+    <link href="styles.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body id="body" class="bg-gray-100 min-h-screen flex justify-center items-center" style="background-color: var(--bg-color); color: var(--text-color);">
+	<div id="main-view">
+		<div class="text-center">
+			<h1 class="text-6xl font-bold mb-6">Moscow</h1>
+			<button id="go-btn" class="px-6 py-3 rounded-full font-semibold shadow-lg">
+				Let's go
+			</button>
+		</div>
+	</div>
+
+	<div id="form-view" style="display: none;">
+		<div id="form-div" class="p-8 rounded-lg shadow-md max-w-md">
+			<h1 class="text-2xl font-bold mb-6">Hi</h1>
+			<form id="homie-form">
+				<div class="mb-4">
+					<label id="form-name" for="name" class="block font-semibold mb-2">Name</label>
+					<input type="text" id="name" name="name" placeholder="Rithass"
+						class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300 focus:outline-none">
+				</div>
+				<div class="mb-4">
+					<label id="form-selection" class="form-label block font-semibold mb-2">Homie?</label>
+					<ul class="list-none">
+						<li>
+							<label class="flex items-center">
+								<input type="radio" name="homie" value="Homie Forever"
+									class="mr-2 leading-tight text-blue-500 border rounded focus:ring focus:ring-blue-300">
+								<span class="text-sm">Homie Forever</span>
+							</label>
+						</li>
+						<li>
+							<label class="flex items-center">
+								<input type="radio" name="homie" value="Fuck off, I'm leaving to MH"
+									class="mr-2 leading-tight text-blue-500 border rounded focus:ring focus:ring-blue-300">
+								<span class="text-sm">Frick off, I'm leaving to MH</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<button type="submit"
+					class="w-full py-2 px-4 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
+					Submit
+				</button>
+			</form>
+		</div>
+	</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

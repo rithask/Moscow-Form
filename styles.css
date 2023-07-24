@@ -1,0 +1,99 @@
+/* CSS variables for light mode */
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+    --button-bg: #000;
+    --button-text: #fff;
+    --button-bg-hover: #007aff;
+    --button-text-hover: #fff;
+    --button-bg-active: #0056b3;
+    --button-text-active: #f8f8f8;
+    --button-shadow: rgba(0, 0, 0, 0.1); /* Button shadow for light mode */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #000;
+        --text-color: #f8f8f8;
+        --button-bg: #fff;
+        --button-text: #000; /* Button text color in dark mode */
+        --button-bg-hover: #0056b3;
+        --button-text-hover: #f8f8f8;
+        --button-bg-active: #003c80;
+        --button-shadow: rgba(255, 255, 255, 0.1); /* Button shadow for dark mode */
+    }
+}
+
+/* Additional styling for the button */
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px -1px var(--button-shadow), 0 2px 4px -1px var(--button-shadow);
+}
+
+button:hover {
+    background-color: var(--button-bg-hover);
+    color: var(--button-text-hover);
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px -1px var(--button-shadow), 0 2px 4px -1px var(--button-shadow);
+}
+
+button:active {
+    background-color: var(--button-bg-active);
+    color: var(--button-text-active);
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px 0 var(--button-shadow), 0 1px 2px 0 var(--button-shadow);
+}
+
+/* Dark mode button */
+.dark-mode-button {
+    font-size: 24px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+/* Additional styles for the form animation */
+.form-popup {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#body {
+    position: relative; /* Set the position to relative for positioning the ::before pseudo-element */
+    animation: fadeInBackground 1s forwards; /* Apply the fade-in animation */
+}
+
+#body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image.jpeg'); /* Replace 'your-image.jpg' with the URL of your desired background image */
+    background-position: center;
+	background-size: 50%;
+    opacity: 0.5; /* Adjust the opacity value to control the fade effect */
+    z-index: -1; /* Set the z-index to place the pseudo-element behind the content */
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Fade to full opacity */
+    }
+}
