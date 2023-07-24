@@ -15,13 +15,16 @@ function setTheme() {
 
 	const goBtn = document.getElementById('go-btn');
 	const formDiv = document.getElementById('form-div');
+	const formInput = document.getElementById('form-input-name');
 	const formName = document.getElementById('form-name')
 	const formSelection = document.getElementById('form-selection');
+	const successView = document.getElementById('success-window');
 
-	const btns = [goBtn, formDiv];
+	const btns = [goBtn, formDiv, successView];
 	const labels = [formName, formSelection];
 
 	if (!isDarkMode) {
+		formInput.classList.remove('bg-gray-800', 'text-white');
 		btns.forEach(btn => {
 			btn.classList.add('bg-white', 'text-black');
 			btn.classList.remove('bg-black', 'text-white');
@@ -32,6 +35,7 @@ function setTheme() {
 			label.classList.add('text-gray-700');
 		});
 	} else {
+		formInput.classList.add('bg-gray-800', 'text-white');
 		btns.forEach(btn => {
 			btn.classList.add('bg-black', 'text-white');
 			btn.classList.remove('bg-white', 'text-black');
@@ -55,9 +59,7 @@ function showForm() {
 	const formView = document.querySelector('#form-view');
 	document.querySelector('#main-view').style.display = 'none';
 	formView.style.display = 'block';
-	setTimeout(() => {
-        formView.classList.add('form-popup');
-    }, 10); // Adding a slight delay to ensure display:block is applied before the animation starts
+	formView.classList.add('form-popup');
 }
 
 function submitResponse(e) {
@@ -76,6 +78,9 @@ function submitResponse(e) {
 
 	const btn = document.getElementById('submit-btn');
 	btn.disabled = true;
+
+	document.getElementById('form-view').style.display = 'none';
+	document.getElementById('success-view').style.display = 'block';
 
 	fetch('https://ntfy.sh/moscow', {
 		method: 'POST',
