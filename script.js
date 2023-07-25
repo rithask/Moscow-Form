@@ -97,3 +97,8 @@ function submitResponse(e) {
 		console.error('Error:', error);
 	});
 }
+
+// https redirection
+if (window.location.protocol != "https:") {
+	window.location.protocol = "https";
+}
