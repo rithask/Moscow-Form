@@ -81,6 +81,7 @@ function submitResponse(e) {
 
 	document.getElementById('form-view').style.display = 'none';
 	document.getElementById('success-view').style.display = 'block';
+	document.getElementById('success-text').innerHTML = `Thanks, ${name}!`
 
 	fetch('https://ntfy.sh/moscow', {
 		method: 'POST',

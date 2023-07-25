@@ -12,7 +12,7 @@ body {
     --text-color: #333;
     --button-bg: #000;
     --button-text: #fff;
-    --button-bg-hover: #007aff;
+    --button-bg-hover: #000;
     --button-text-hover: #fff;
     --button-bg-active: #0056b3;
     --button-text-active: #f8f8f8;
@@ -26,8 +26,8 @@ body {
         --text-color: #f8f8f8;
         --button-bg: #fff;
         --button-text: #000; /* Button text color in dark mode */
-        --button-bg-hover: #0056b3;
-        --button-text-hover: #f8f8f8;
+        --button-bg-hover: #fff;
+        --button-text-hover: #000;
         --button-bg-active: #003c80;
         --button-shadow: rgba(255, 255, 255, 0.1); /* Button shadow for dark mode */
     }
