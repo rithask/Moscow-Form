@@ -90,7 +90,7 @@ button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('image.jpeg'); /* Replace 'your-image.jpg' with the URL of your desired background image */
+    background-image: url('bg.webp'); /* Replace 'your-image.jpg' with the URL of your desired background image */
     background-position: center;
 	background-size: 50%;
     opacity: 0.5; /* Adjust the opacity value to control the fade effect */
