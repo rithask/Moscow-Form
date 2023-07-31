@@ -99,6 +99,6 @@ function submitResponse(e) {
 }
 
 // https redirection
-if (window.location.protocol != "https:") {
-	window.location.protocol = "https";
-}
+// if (window.location.protocol != "https:") {
+// 	window.location.protocol = "https";
+// }
