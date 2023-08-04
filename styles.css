@@ -17,6 +17,7 @@ body {
     --button-bg-active: #0056b3;
     --button-text-active: #f8f8f8;
     --button-shadow: rgba(0, 0, 0, 0.1); /* Button shadow for light mode */
+	--button-border: #000 2px solid;
 }
 
 /* Dark mode styles */
@@ -30,6 +31,7 @@ body {
         --button-text-hover: #000;
         --button-bg-active: #003c80;
         --button-shadow: rgba(255, 255, 255, 0.1); /* Button shadow for dark mode */
+		--button-border: #ACADA8 2px solid;
     }
 }
 
@@ -39,6 +41,7 @@ button {
     color: var(--button-text);
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 6px -1px var(--button-shadow), 0 2px 4px -1px var(--button-shadow);
+	border: var(--button-border);
 }
 
 button:hover {
